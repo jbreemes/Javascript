@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>AnimalChooser</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
     <style>
-
-        body{
-            font-family: 'Roboto' , Serif;
+        body {
+            font-family: 'Copse', Serif;
             text-align: center;
         }
-        div.picture-holder {
+
+        div.picture-holder{
             box-sizing: border-box;
             height: 450px;
             width: 300px;
             float: left;
-            border: solid 1px black;
+            background-color: red;
+            border: 1px solid black;
         }
+
         div.favoriet{
             width: 300px;
             height: 150px;
+            background-color: white;
             background-image: none;
             background-repeat: no-repeat;
             background-position: center;
@@ -32,71 +35,14 @@
             font-size: 0px;
             margin: auto;
         }
-
     </style>
 </head>
 <body>
-<h1>Monkeychooser</h1>
-<h3>choose your favorite monkey</h3>
+<h1>Animalchooser</h1>
+<h3>Choose your favorite animal!</h3>
 <div id="pics">
-    <img src="aap1.jpg">
-    <img src="aap2.jpg">
-    <img src="aap3.jpg">
-    <img src="aap4.jpg">
-    <img src="aap5.jpg">
-    <img src="aap6.jpg">
-    <img src="aap7.jpg">
-    <img src="aap8.jpg">
-    <img src="aap9.jpg">
+
 </div>
-<script>
-    pics = document.getElementById("pics");
-    createPicsHolders();
-    createAapImages();
-
-    function createPicsHolders(){
-        for(var i = 0; i < 9; i++) {
-            pictureHolder = document.createElement("div");
-            pictureHolder.className = "picture-holder";
-            pictureHolder.id = "picture-holder" + i;
-            pics.appendChild(pictureHolder);
-        }
-    }
-
-    function createAapImages() {
-        pictureHolder = document.getElementsByClassName("picture-holder");
-        for(var i=0; i < pictureHolder.length; i++) {
-            favoriet = document.createElement("div");
-            favoriet.className = "favoriet";
-            favoriet.id = "favoriet_" + (i+1);
-            aapPlaatje = document.createElement("img");
-            aapPlaatje.src = "aap" + (i + 1) + ".jpg";
-            aapPlaatje.id = (i+1);
-            aapPlaatje.addEventListener("click", function(){
-                maakFavoriet(this.id);
-            });
-            pictureHolder[i].appendChild(favoriet);
-            pictureHolder[i].appendChild(aapPlaatje);
-        }
-
-    }
-
-    function maakFavoriet(id) {
-        console.log("Maak mijn favoriet en het om plaatje" + id);
-        notsofavoriet = document.getElementsByClassName("favoriet");
-
-        for(var i = 0; i < notsofavoriet.length; i++) {
-            notsofavoriet[i].style.backgroundImage = "none";
-        }
-
-        favoriet = document.getElementById("favoriet_" + id);
-        favoriet.style.backgroundImage = "url('hart.png')";
-
-    }
-
-
-
-</script>
-
+<script src="5.1.js"> </script>
 </body>
 </html>
