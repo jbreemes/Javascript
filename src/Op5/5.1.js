@@ -1,8 +1,8 @@
 pics = document.getElementById("pics");
-createPicsHolders();
+createImgHolders();
 createDierImages();
 
-function createPicsHolders() {
+function createImgHolders() {
     for (var i = 0; i < 9; i++) {
         picsHolders = document.createElement("div");
         picsHolders.className = "picture-holder";
@@ -10,7 +10,6 @@ function createPicsHolders() {
         pics.appendChild(picsHolders);
     }
 }
-//picsHolders maken
 
 function createDierImages() {
     pictureHolders = document.getElementsByClassName("picture-holder");
@@ -31,10 +30,10 @@ function createDierImages() {
 
 function maakFavoriet(id) {
     console.log("Maak mij favoriet! Het gaat om dier..." + id );
-    notsofavoriet = document.getElementsByClassName("favoriet");
+    fav = document.getElementsByClassName("favoriet");
 
-    for (var i = 0; i < notsofavoriet.length; i++) {
-        notsofavoriet[i].style.backgroundImage = "none";
+    for (var i = 0; i < fav.length; i++) {
+        fav[i].style.backgroundImage = "none";
     }
     favoriet =  document.getElementById("favoriet_" + id);
     favoriet.style.backgroundImage = "url('img/hart.png')";
