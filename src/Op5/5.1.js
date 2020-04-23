@@ -17,19 +17,21 @@ function createDierImages() {
         favoriet = document.createElement("div");
         favoriet.className = "favoriet";
         favoriet.id = "favoriet_" + (i+1);
+
         dierPlaatje = document.createElement("img");
         dierPlaatje.src = "img/dier" + (i+1) + ".jpg";
         dierPlaatje.id = (i+1);
         dierPlaatje.addEventListener("click", function () {
             maakFavoriet(this.id);
         });
+
         pictureHolders[i].appendChild(favoriet);
         pictureHolders[i].appendChild(dierPlaatje);
     }
 }
 
 function maakFavoriet(id) {
-    console.log("Maak mij favoriet! Het gaat om dier..." + id );
+
     fav = document.getElementsByClassName("favoriet");
 
     for (var i = 0; i < fav.length; i++) {
