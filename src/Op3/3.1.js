@@ -10,7 +10,7 @@ while (randomNumbers.length < 9){
     }
 }
 random = 0;
-for(var plaatje in plaatjes) {
-    plaatjes[plaatje].src = "img/aap" + randomNumbers[random] + ".jpg";
+for(var cooleaap in plaatjes) {
+    plaatjes[cooleaap].src = "img/aap" + randomNumbers[random] + ".jpg";
     random++;
 }
